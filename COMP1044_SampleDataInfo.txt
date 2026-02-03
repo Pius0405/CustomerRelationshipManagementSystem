@@ -1,0 +1,7 @@
+sign in with: http://localhost/COMP1044_SRC/signin.php
+sample account for admin: 
+username: jcarlson124
+password: abcde
+sample account for sales rep: 
+username: jsmith02
+password: 12345
