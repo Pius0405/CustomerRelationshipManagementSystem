@@ -67,3 +67,5 @@ A comprehensive, full-stack Customer Relationship Management (CRM) system for mo
 
 <img width="1919" height="697" alt="image" src="https://github.com/user-attachments/assets/cb4e5ba0-114d-4f30-a2fc-bb45da611908" />
 
+<img width="1915" height="709" alt="image" src="https://github.com/user-attachments/assets/9b40bb43-5254-423d-a035-d459da22d6ab" />
+
