@@ -1,0 +1,77 @@
+.notification-center-banner {
+    margin: 0;
+    margin-top: 78px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.unread-notifications-banner {
+    margin: 0;
+    margin-top : 30px;
+    text-align: center;
+    font-size: 16px;
+    color: rgb(142, 142, 147);
+}
+
+.notifications-info-banner {
+    margin: 0;
+    margin-top : 50px;
+    text-align: center;
+    font-size: 12px;
+    color: rgb(142, 142, 147);
+}
+
+.notifications-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.notification-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.notification-block {
+    width: 30%;
+    background-color: rgb(216, 216, 220);
+    border-radius: 16px;
+    margin-bottom: 15px;
+    padding: 15px 15px;
+}
+
+.notification-block p {
+    margin: 0;
+    padding: 0;
+}
+
+.notification-block .top-section{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.notification-block .top-section .date{
+    color: rgb(108, 108, 112);
+}
+
+.notification-block:hover {
+    cursor: pointer;
+}
+
+.mark-as-read-button {
+    background-color: rgb(229, 229, 234);
+    color: rgb(0, 122, 255);
+    border-radius: 16px;
+    margin-bottom: 17px;
+    margin-top: 22px;
+    padding: 15px 15px;
+    border: none;
+}
+
+.mark-as-read-button:hover {
+    background-color: rgb(216, 216, 220);
+    cursor: pointer;
+}   

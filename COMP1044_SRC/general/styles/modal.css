@@ -1,0 +1,668 @@
+.modal{
+    background-color: rgb(242, 242, 247);
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    height: 170px;
+    width: 380px;
+    z-index: 9999;
+    border-radius: 16px;
+    margin: 0px;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.question {
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.warning {
+    color: gray;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.modal-buttons-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border: none;
+    border-top-width: 1.6px;
+    border-color: rgb(209, 209, 214);
+    border-top-style: solid;
+    flex: 1;
+    overflow: hidden;
+}
+
+
+.modal-buttons-container button {
+    background-color: rgb(242, 242, 247);
+    font-weight: bold;
+    padding: 10px 15px;
+    flex: 1;
+    border: none;
+    font-size: 15px;
+}
+
+.modal-buttons-container .delete-button {
+    color: rgb(255, 59, 48);
+    border-left-width: 0.8px;
+    border-color: rgb(209, 209, 214);
+    border-left-style: solid;
+}
+
+.modal-buttons-container .cancel-button {
+    color: rgb(0, 122, 255);
+    border-right-width: 0.8px;
+    border-color: rgb(209, 209, 214);
+    border-right-style: solid;
+}
+
+.modal-buttons-container .cancel-button:hover {
+    color: rgb(10, 132, 255);
+    background-color: rgb(229, 229, 234);
+    cursor: pointer;
+}
+
+.modal-buttons-container .delete-button:hover {
+    color: rgb(255, 69, 58);
+    background-color: rgb(229, 229, 234);
+    cursor: pointer;
+}
+
+.restrictUpdateModal {
+    height: 185px;
+}
+
+.restrictUpdateModal .warning{
+    padding: 0px 10px;
+}
+
+.userInfoModal {
+    height: 275px;
+    width: 400px;
+}
+
+.user-info-block{
+    text-align: center;
+    padding: 20px;
+    padding-bottom: 10px;
+    font-size: 16px;
+    color: rgb(128, 128, 128);
+}
+
+.user-info-block .user-information-header{
+    color: rgb(28,28,30);
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.user-info-block p{
+    margin: 0;
+}
+
+.user-info-block .user-details {
+    text-align: left;
+}
+
+.user-info-block .user-details p {
+    margin-bottom: 15px;
+}
+
+
+.user-info-block .section {
+    color: rgb(28,28,30);
+    font-weight: bold;
+}
+
+
+.calendar-modal {
+    width: 80%;
+    max-width: 550px;
+    height: auto;
+}
+
+.modal-content {
+    padding: 20px;
+    padding-bottom: 0px;
+    position: relative;
+}
+
+.modal-date {
+    margin: 0;
+}
+
+.modal-reminders {
+    margin-top: 20px;
+    height: auto;
+}
+
+.reminder-entry {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+.reminder-name {
+    font-weight: bold;
+    color: black;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.reminder-type {
+    color: rgb(0, 122, 255);
+}
+
+.calendar-modal .modal-buttons-container button {
+    padding: 15px 15px;
+}
+
+.reminder-user {
+    font-size: 13px;
+    color: rgb(108, 108, 112);
+}
+
+.customer-profile-modal {
+    border-radius: 16px;
+    background-color: white;
+    margin: 0px;
+    padding: 20px;
+    position: fixed;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 9999;
+    width: 70vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+}
+
+.info-icon {
+    height: 30px;
+    width: 30px;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.close-modal-btn {
+    background: none;
+    border: none;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #999;
+    padding: 0 5px;
+}
+
+.close-modal-btn:hover {
+    color: #333;
+}
+
+.customer-data-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
+
+.customer-name {
+    font-weight: bold;
+    font-size: 25px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.customer-company {
+    font-weight: bold;
+    color: rgb(174, 174, 178);
+    font-size: 20px;
+    margin: 0px;
+    margin-bottom: 10px;
+    padding: 0px;
+}
+
+.customer-phone-block {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0px;
+    margin-bottom: 10px;
+    padding: 0px;
+    gap: 10px;
+    flex: 1;
+    min-width: 0; /* This is crucial for text-overflow to work */
+}
+
+.customer-phone {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
+}
+
+.customer-email-block {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0px;
+    margin-bottom: 10px;
+    padding: 0px;
+    gap: 10px;
+    flex: 1;
+    min-width: 0; /* This is crucial for text-overflow to work */
+}
+
+.customer-email {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
+}
+
+.tabs-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.tabs-navigation {
+    display: flex;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 15px;
+}
+
+.tab-group {
+    position: relative;
+    cursor: pointer;
+    margin-right: 25px;
+}
+
+.tab-inner {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.tab-icon {
+    height: 25px;
+    width: 25px;
+    margin-right: 8px;
+}
+
+.tab-text {
+    font-size: 16px;
+    color: #666;
+}
+
+.tab-group.active .tab-text {
+    color: #007bff;
+    font-weight: bold;
+}
+
+/* Responsive underline */
+.tab-group.active::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    background-color: #007bff;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    width: 120%;
+}
+
+.tab-content {
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    flex: 1;
+}
+
+.customer-interaction-block {
+    overflow-y: auto;
+    padding-right: 5px;
+    height: 100%; /* This is crucial */
+}
+
+.customer-interaction-block::-webkit-scrollbar {
+    width: 6px;
+}
+
+.customer-interaction-block::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+.customer-interaction-block::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+.customer-reminders-block {
+    overflow-y: auto;
+    padding-right: 5px;
+    height: 100%; /* This is crucial */
+}
+
+.customer-reminders-block::-webkit-scrollbar {
+    width: 6px;
+}
+
+.customer-reminders-block::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+.customer-reminders-block::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+.interaction-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px 10px;
+    margin-bottom: 12px;
+    background-color: #f9f9f9;
+}
+
+.interaction-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.interaction-type {
+    font-weight: bold;
+    color: #2c3e50;
+    font-size: 14px;
+}
+
+.interaction-date {
+    font-size: 14px;
+    color: #7f8c8d;
+}
+
+.interaction-description {
+    color: #333;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.reminder-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px 10px;
+    margin-bottom: 12px;
+    background-color: #f9f9f9;
+}
+
+.reminder-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.reminder-date {
+    font-size: 14px;
+    color: #7f8c8d;
+}
+
+.reminder-description {
+    color: #333;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+
+
+.lead-profile-modal {
+    border-radius: 16px;
+    background-color: white;
+    margin: 0px;
+    padding: 20px;
+    position: fixed;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 9999;
+    width: 70vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+}
+
+.lead-data-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
+
+.lead-name {
+    font-weight: bold;
+    font-size: 25px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.lead-company {
+    font-weight: bold;
+    color: rgb(174, 174, 178);
+    font-size: 20px;
+    margin: 0px;
+    margin-bottom: 10px;
+    padding: 0px;
+}
+
+.lead-notes-block {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0px;
+    margin-bottom: 10px;
+    padding: 0px;
+    gap: 10px;
+    flex: 1;
+    min-width: 0; /* This is crucial for text-overflow to work */
+}
+
+.lead-notes {
+    margin: 0;
+}
+
+.lead-phone {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
+}
+
+.lead-phone-block {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0px;
+    margin-bottom: 10px;
+    padding: 0px;
+    gap: 10px;
+    flex: 1;
+    min-width: 0; /* This is crucial for text-overflow to work */
+}
+
+.lead-phone {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
+}
+
+.lead-email-block {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0px;
+    margin-bottom: 10px;
+    padding: 0px;
+    gap: 10px;
+    flex: 1;
+    min-width: 0; /* This is crucial for text-overflow to work */
+}
+
+.lead-email {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
+}
+
+.lead-interaction-block {
+    overflow-y: auto;
+    padding-right: 5px;
+    height: 100%; /* This is crucial */
+}
+
+.lead-interaction-block::-webkit-scrollbar {
+    width: 6px;
+}
+
+.lead-interaction-block::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+.lead-interaction-block::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+.lead-reminders-block {
+    overflow-y: auto;
+    padding-right: 5px;
+    height: 100%; /* This is crucial */
+}
+
+.lead-reminders-block::-webkit-scrollbar {
+    width: 6px;
+}
+
+.lead-reminders-block::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+.lead-reminders-block::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+.status-tracker {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    width: 80%;
+}
+
+/* Line connecting circles */
+.status-tracker::before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 15px; /* Start after first circle radius */
+    right: 15px; /* End before last circle radius */
+    height: 2px;
+    background-color: rgb(174, 174, 178);
+    z-index: 1;
+}
+
+.status-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.status-circle {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: red;
+    margin-bottom: 10px;
+}
+
+.status-label {
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(174, 174, 178);
+    text-align: center;
+    white-space: nowrap;
+}
+
+/* Specific status colors based on your image */
+.status-step[data-status="new"].active .status-circle,
+.status-step.completed .status-circle {
+    background-color: rgb(0, 255, 0); /* Green */
+}
+
+.status-step[data-status="in-progress"].active .status-circle {
+    background-color: rgb(0, 255, 0); /* Green */
+}
+
+.status-step[data-status="contacted"].active .status-circle {
+    background-color: rgb(0, 255, 0); /* Green */
+}
+
+.status-step[data-status="closed"].active .status-circle {
+    background-color: rgb(0, 255, 0); /* Red */
+}
+
+.status-step.active .status-label {
+    color: rgb(28, 28, 30);
+    font-weight: bold;
+}
+
+
+
+.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+    

@@ -1,0 +1,150 @@
+.calendar-container {
+    margin: 0px; 
+    width: 100%;
+    text-align: left; 
+    font-family: Arial, sans-serif;
+    background-color: rgb(242, 242, 247);
+    border-radius: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.calendar-header button {
+    background-color: rgb(0, 122, 255);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.calendar-header button:hover {
+    background-color: rgb(64, 156, 255);
+}
+
+.calendar {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed; /* Add this to ensure equal column widths */
+    border-spacing: 0;  /* Add this to remove gaps between borders */
+}
+
+.calendar th, .calendar td {
+    padding: 10px;
+    text-align: center;
+    height: 50px;
+}
+
+.calendar th {
+    background-color: rgb(0, 122, 255);
+    color: white;
+    border-radius: 0;
+}
+
+.calendar th:first-child {
+    border-top-left-radius: 16px; 
+}
+
+.calendar th:last-child {
+    border-top-right-radius: 16px; 
+}
+
+.calendar td:hover {
+    background-color: rgb(240, 240, 240);
+    cursor: pointer;
+}
+
+.calendar tr:last-child td:first-child {
+    border-bottom-left-radius: 16px; /* Bottom-left corner */
+}
+
+.calendar tr:last-child td:last-child {
+    border-bottom-right-radius: 16px; /* Bottom-right corner */
+}
+
+/* Remove top border from first row of dates */
+.calendar tr:first-child td {
+    border-top: none;
+}
+
+/* Add vertical borders */
+.calendar td:not(:last-child) {
+    border-right: 1px solid #eee;
+}
+
+
+.calendar td {
+    position: relative;
+    width: calc(100% / 7); /* Add this to make all columns equal width */
+    vertical-align: top;
+    padding: 5px;
+    overflow: visible;  /* Changed from hidden to visible */
+    background-color: white;
+    box-sizing: border-box;
+    border-top: 1px solid #eee;  /* Add thin top border */
+}
+
+/* Add this new rule to force minimum height */
+.calendar td::after {
+    content: '';
+    display: block;
+    min-height: 30px;  /* Adjust this value to your needs */
+}
+
+/* Keep the content properly positioned */
+.calendar td > * {
+    position: relative;
+    z-index: 1;
+}
+
+.date {
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+.reminder-container {
+    display: flex;
+    flex-direction: column;  /* Changed from row to column */
+    gap: 2px;  /* Reduced gap for vertical spacing */
+    margin-top: 2px;
+    max-width: 100%;
+}
+
+.reminder-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: rgb(0, 122, 255);
+    flex-shrink: 0;
+}
+
+/* New wrapper for dot and text */
+.calender-reminder-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    width: 100%;
+}
+
+.reminder-text {
+    font-size: 11px;
+    color: rgb(108, 108, 112);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: calc(100% - 15px);  /* Account for dot width and gap */
+}
+
+.reminder-text-in-modal {
+    font-size: 13px;
+    color: rgb(108, 108, 112);
+}

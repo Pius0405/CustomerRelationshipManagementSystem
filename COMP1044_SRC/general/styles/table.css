@@ -1,0 +1,177 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    width: 90%; 
+    max-width: 90%;
+    margin: 0 auto; 
+    padding-bottom: 50px;
+}
+
+#customerTable {
+    width: 100%; 
+    max-width: 100%; /* Ensure table doesn't exceed container width */
+    table-layout: fixed;
+    border-collapse: collapse;
+    margin: 0 auto;
+    font-size: 14px;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+#customerTable th, #customerTable td {
+    padding: 12px;
+    text-align: center;
+    overflow: hidden;
+    white-space: normal;        
+    text-overflow: ellipsis;
+    word-wrap: break-word; /* Allow long words to break */
+}
+
+#customerTable th {
+    background-color: rgb(229, 229, 234);
+    border-bottom: 1px solid rgb(216, 216, 220);
+}
+
+
+#customerTable tr {
+    background-color: rgb(242, 242, 247);
+    border-bottom: 1px solid rgb(216, 216, 220);
+}
+
+#customerTable tr:last-child {
+    border: none;
+}
+
+.viewButton {
+    background-color: rgb(229, 229, 234);
+    color: rgb(0, 122, 255);
+    border-radius: 14px;
+    border:none;
+    box-shadow:none;
+    outline:none;
+    cursor: pointer;
+    text-decoration: none;
+    white-space: nowrap;
+    font-size: 14px;
+    padding: 8px 16px;
+}
+
+.viewButton:hover {
+    background-color: rgb(216, 216, 220);
+}
+
+.restrictViewButton {
+    color: rgb(142, 142, 147);
+}
+
+.clients-header {
+    font-size: 24px;
+    font-weight: bold;
+    align-self: flex-start; /* Aligns text to the left edge of the container */
+    margin-bottom: 10px;
+}
+
+.table-header {
+    display: flex;
+    justify-content: flex-end; /* Keeps "Clients:" left and search bar right */
+    align-items: center;
+    width: 100%; 
+    max-width: none; 
+    margin: 0 auto;
+    margin-bottom: 10px;
+    gap: 10px; /* Space between header text and search bar */
+}
+
+/* Ensure the search bar stays at the right end of the table width */
+.search-bar {
+    position: relative;
+    display: flex;
+    justify-content: flex-end; /* Aligns input within the search bar */
+    width: 280px;
+    margin-left: auto; /* This pushes the search bar all the way to the right */
+}
+
+
+/* Search input field */
+.search-bar input {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 14px;
+    border: none;
+    border-radius: 16px;
+    background-color: rgb(229, 229, 234);
+    outline: none;
+    padding-left: 30px;
+}
+
+.search-bar .search-icon {
+    position: absolute;
+    top: 29%;
+    left: 3%;
+    height: 14px;
+}
+
+/* Add Action Button */
+.table-actions {
+    display: flex;
+    justify-content: flex-end; /* Pushes button to the right */
+    width: 100%;
+    max-width: none; /* Matches table width */
+    margin-top: 10px;
+}
+
+.addButton {
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 16px;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(0, 122, 255);
+    color: white;
+    outline: none;
+    text-decoration: none;
+}
+
+.addButton:hover {
+    color: rgb(0, 122, 255);
+    background-color: rgb(235, 235, 240);;
+}
+
+
+.sort-dropdown {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.sort-dropdown select {
+    padding: 10px 8px;
+    border: none;
+    border-radius: 8px;
+    background-color: rgb(229, 229, 234);
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+}
+
+.sort-direction-btn {
+    padding: 6px 12px;
+    background-color: rgb(0, 122, 255);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+}
+
+.sort-direction-btn:hover {
+    background-color: rgb(10, 132, 255);
+}
+
+
+

@@ -1,0 +1,21 @@
+<?php
+session_start();  
+
+if (!isset($_SESSION['userID'])) {
+    header("Location: signin.php"); // Redirect to login if not logged in
+    exit;
+}
+
+session_unset();         
+session_destroy();        
+if (ini_get("session.use_cookies")) {
+    $params = session_get_cookie_params();
+    setcookie(session_name(), '', time() - 42000,
+        $params["path"], $params["domain"],
+        $params["secure"], $params["httponly"]
+    );
+}
+
+header("Location: signin.php");
+exit;
+?>

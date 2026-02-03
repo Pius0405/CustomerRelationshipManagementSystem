@@ -1,0 +1,53 @@
+.add-user-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.add-user-form-container form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    gap: 20px; 
+}
+
+.add-user-form-container input,
+.add-user-form-container select {
+    height: 40px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 16px;
+    border: none;
+    color: black;
+    outline: none;
+    background-color: rgb(216, 216, 220);
+}
+
+.add-user-form-container select {
+    color: rgb(117, 117, 117);  
+}
+
+.add-user-form-container select:valid {
+    color: black;
+}
+
+
+.add-user-button {
+    height: 40px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    outline: none;
+    border-radius: 16px;
+    border: none;
+    background-color: rgb(0, 122, 255);
+    color: white;
+}
+
+.add-user-button:hover {
+    cursor: pointer;
+    background-color: rgb(10, 132, 255);
+    color: white;
+}
